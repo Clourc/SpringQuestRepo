@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Thymeleaf</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+
+  <body>
+    <header th:replace="header.html :: top"></header>
+    <h1 th:text="|Hello ${name}!|">Hello World!</h1>
+    <footer th:replace="this :: bottom"></footer>
+  </body>
+
+  </html>
+  <footer th:fragment="bottom"><h1>This is my footer</h1></footer>
